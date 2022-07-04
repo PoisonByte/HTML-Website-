@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>interest</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #42413C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing block. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the blocks, instead of the block elements themselves, gets rid of any box model math. A nested block with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+/* ~~ This fixed width container surrounds all other blocks ~~ */
+.container {
+	width: 960px;
+	background-color: #FFFFFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+/* ~~ The header is not given a width. It will extend the full width of your layout. ~~ */
+header {
+	background-color: #FCBEA1;
+}
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the block elements. The elements within these blocks have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the block itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the block element and place a second block element within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a block set to float right). Many times, padding can be used instead. For blocks where this rule must be broken, you should add a "display:inline" declaration to the block element's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar blocks could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the left instead of the right, simply float these columns the opposite direction (all left instead of all right) and they'll render in reverse order. There's no need to move the blocks around in the HTML source.
+
+*/
+.sidebar1 {
+	float: right ;
+	width: 180px;
+	background-color: #EADCAE;
+	padding-bottom: 10px;
+}
+.content {
+	padding: 10px 0;
+	width: 780px;
+	float: right;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+nav ul{
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+nav a, nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background-color: #C6D580;
+}
+nav a:hover, nav a:active, nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background-color: #5DCEF0;
+	color: #FFF;
+}
+
+/* ~~ The footer ~~ */
+footer {
+	padding: 10px 0;
+	background-color: #CCC49F;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+/*HTML 5 support - Sets new HTML 5 tags to display:block so browsers know how to render the tags properly. */
+header, section, footer, aside, article, figure {
+	display: block;
+}
+-->
+</style><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--></head>
+
+<body>
+
+<div class="container">
+  <header><img src="logo.png" width="800" height="140" alt=""/><img src="Serena.jpg" width="155" height="150" alt=""/></header>
+  <div class="sidebar1">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cis145.html">CIS 145</a></li>
+      <li><a href="interests.html">Interests</a></li>
+      <li><a href="resume.html">Resume</a></li>
+	  <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </nav>
+    <aside>
+      <p>This page will share a few of my interests!!</p>
+      <p><img src="banner-recycle.jpg" width="150" height="100" alt=""/></p>
+    </aside>
+  <!-- end .sidebar1 --></div>
+  <article class="content">
+    <h1>My Interests</h1>
+    <p>Welcome to my interest page! I would like to share with you a few of my favorite interest which would include comics, shopping and music!</p>
+    <h3>Comics</h3>
+    <p>Since I've can remember comics were always apart of my life. I enjoy multiple of comics and styles which is hard to decide between if I'm more a DC or Marvel fan! I do have my favorties characters and story arcs from each company so I think there is nothing wrong with being an equal opportunist. </p>
+    <table width="731" border="1" align="left">
+      <tbody>
+        <tr>
+          <td width="65"><a href="https://www.dccomics.com/" target="_blank">DC Comics</a></td>
+          <td width="244">This is the main website for DC Comics and to stay up to date on adventures with your favorite hero like Black Canary or Wonder Woman!</td>
+          <td width="400" align="center"><img src="DC_logo.png" width="150" height="150" alt=""/></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.marvel.com/" target="_blank">Marvel</a></td>
+          <td>This is the main website for Marvel Comics. Allowing to keep fans to stay up to date with their favorite Avengers or X-men! </td>
+          <td><img src="1200px-MarvelLogo.svg.png" width="400" height="200
+			  " alt=""/></td>
+        </tr>
+        <tr>
+          <td><a href="http://www.comicsonthegreen.com/" target="_blank">Comics on the green</a></td>
+          <td>Comics on the green is my local comic book store where I frequently go to get my new releases or discover old finds!</td>
+          <td align="center"><img src="cotg_logo.jpeg" width="225" height="225" alt=""/></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3>Shopping</h3>
+    <p>Some good old fashion retail therapy always helps me when I'm stressed or in need of inspiration. Some of my favorite website to visit when I would like to shop include Cafepress, Amazon and Ulta.</p>
+    <table width="731" border="1" align="left">
+      <tbody>
+        <tr>
+          <td width="65"><a href="https://www.cafepress.com/" target="_blank">Cafepress</a></td>
+          <td width="244">A great website for customization and expression! Really enjoy creatingsomething unique that would help with my Twitch channel.</td>
+          <td width="400" align="center"><img src="logo_cafepress.png" width="424" height="276" alt=""/></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.amazon.com/" target="_blank">Amazon</a></td>
+          <td>Amazon has just about everything you can think of and with prime shipping you could have that item in 2 days!</td>
+          <td align="center"><img src="logo_amazon.jpg" width="400" height="273" alt=""/></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.ulta.com/" target="_blank">Ulta</a></td>
+          <td>What girl wouldn't be complete without all her favorite makeup brand and skin care to help keep her ready for each day!</td>
+          <td align="center"><img src="ulta_logo.png" width="259" height="194" alt=""/></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3>Music</h3>
+    <p>Music is another way for me not only to express my feelings but it keeps me energize and looking forward to what new meaning each song has for me. Its the best part of life when you have your very own unique soundtrack. Some ways I keep up on my music is through Pandora, Apple Itunes, and my local bands.</p>
+    <table width="731" border="1" align="left">
+      <tbody>
+        <tr>
+          <td width="65"><a href="https://www.pandora.com/" target="_blank">Pandora</a></td>
+          <td width="244">Pandora is an amazing site to customize your very own stations. It great for workouts, home or in the office. </td>
+          <td width="400" align="center"><img src="pandora_logo.jpeg" width="225" height="225" alt=""/></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.marvel.com/" target="_blank">Apple Itunes</a></td>
+          <td>Itunes is another way to create customized play list and you could also buy videos and whole albums for your Iphone or Ipod. </td>
+          <td><img src="apple_logo.jpg" width="474" height="338" alt=""/></td>
+        </tr>
+        <tr>
+          <td><a href="https://blacktiestereo.com/" target="_blank">Black Tie Stereo </a></td>
+          <td>I love the local bands in area and one of my favorites is Black Tie Stereo. I personally know the lead singer and he is a great guy and if you haven't heard of them you should check them out!</td>
+          <td align="center"><img src="bts_logo.jpeg" width="400" height="400" alt=""/></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p><p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <!-- end .content --></article>
+  <footer>
+    <p>This site is a project CIS 145 at <a href="http://www.luzerne.edu">LCCC</a> during the Spring 2019 semester.</p>
+    <address>
+    </address>
+  </footer>
+  <!-- end .container --></div>
+</body>
+</html>
